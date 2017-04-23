@@ -1,0 +1,27 @@
+{
+    "name": "ludumdare2017",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "devDependencies": {
+        "babel-core": "^6.23.1",
+        "babel-loader": "^6.3.2",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "express": "^4.14.1",
+        "matter-js": "^0.12.0",
+        "pixi.js": "^4.4.0",
+        "webpack": "^2.2.1"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "ENVIRONMENT=development node node_modules/webpack/bin/webpack.js -d --watch",
+        "build": "ENVIRONMENT=production node node_modules/webpack/bin/webpack.js -p && cp index.html build/ && cp -r img build/"
+    },
+    "author": "",
+    "dependencies": {
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4"
+    }
+}
