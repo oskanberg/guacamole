@@ -1,6 +1,5 @@
 import {
     Engine,
-    Body,
     World,
     Common,
     Events
@@ -47,7 +46,7 @@ class GameWorld {
         this.engine = Engine.create(PHYSICS_OPTIONS);
         this.engine.world.gravity.y = 0;
         this.engine.world.gravity.x = 0;
-        this.engine.timing.timeScale = 1;
+        // this.engine.timing.timeScale = 1;
 
         // create PIXI
         this.pixiApp = new Application(GAME_WIDTH, GAME_HEIGHT, {

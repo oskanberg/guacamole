@@ -34,7 +34,6 @@ class RetryScreen extends React.Component {
                 <div className="modal-item">
                     <h1>You came {positionMap[position]}!</h1>
                 </div>
-                <span className="glyphicon glyphicon-retweet modal-item" style={styles.retryButton}></span>
             </div>
         );
     }
@@ -49,7 +48,7 @@ class SplashScreen extends React.Component {
                 display: (show)
                     ? null
                     : 'none',
-                background: 'url(img/title.png)',
+                background: 'url(img/lowres/title.png)',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center'

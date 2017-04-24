@@ -1,5 +1,5 @@
 import {
-    Graphics,
+    // Graphics,
     Sprite
 } from 'pixi.js';
 
@@ -8,13 +8,14 @@ import {
     Body
 } from 'matter-js';
 
-import {
-    randomRGB
-} from './util';
+// import {
+//     randomRGB
+// } from './util';
 
 import {
     CIRCLE_PHYSICS_OPTIONS,
-    FORCE_MULTIPLIER
+    FORCE_MULTIPLIER,
+    CIRCLE_MASS
 } from './config';
 
 // const c = new Graphics();
@@ -23,11 +24,11 @@ import {
 // c.drawCircle(100, 100, 100);
 // c.endFill();
 // const circleTexture = c.generateCanvasTexture();
-const doughnutTexture = PIXI.Texture.fromImage('/img/doughnut.png');
-const tomatoTexture = PIXI.Texture.fromImage('/img/tomato.png');
-const eggTexture = PIXI.Texture.fromImage('/img/egg.png');
-const earthTexture = PIXI.Texture.fromImage('/img/earth.png');
-const hedgehogTexture = PIXI.Texture.fromImage('/img/hedgehog.png');
+const doughnutTexture = PIXI.Texture.fromImage('img/lowres/doughnut.png');
+const tomatoTexture = PIXI.Texture.fromImage('img/lowres/tomato.png');
+const eggTexture = PIXI.Texture.fromImage('img/lowres/egg.png');
+const earthTexture = PIXI.Texture.fromImage('img/lowres/earth.png');
+const hedgehogTexture = PIXI.Texture.fromImage('img/lowres/hedgehog.png');
 
 
 const textures = [doughnutTexture, tomatoTexture, eggTexture, earthTexture, hedgehogTexture];
@@ -79,6 +80,7 @@ class Circle {
             radius,
             CIRCLE_PHYSICS_OPTIONS
         );
+        Body.setMass(body, CIRCLE_MASS);
         body._reference = this;
         return body;
     }
